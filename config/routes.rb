@@ -1,8 +1,13 @@
 Pusula::Application.routes.draw do
+
+
+  resources :students
+
   devise_for :admins
 
   namespace :admins do
     resources :dashboard
+    resources :programs
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,29 @@
+%h1 Listing students
+
+%table.table.table_condensed
+  %tr
+    %th Picture
+    %th Name surname
+    %th Number
+    %th Phone
+    %th Email
+    %th Program
+    %th
+    %th
+    %th
+
+  - @students.each do |student|
+    %tr
+      %td= image_tag student.picture(:thumb)
+      %td= student.name_surname
+      %td= student.number
+      %td= student.phone
+      %td= student.email
+      %td= student.program.try(:name)
+      %td= link_to 'Show', student
+      %td= link_to 'Edit', edit_student_path(student)
+      %td= link_to 'Destroy', student, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Student', new_student_path

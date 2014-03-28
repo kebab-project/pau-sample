@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Name surname:
+  = @student.name_surname
+%p
+  %b Number:
+  = @student.number
+%p
+  %b Phone:
+  = @student.phone
+%p
+  %b Email:
+  = @student.email
+%p
+  %b Program:
+  = @student.program.try(:name)
+%p
+  %b Picture
+  = image_tag @student.picture(:medium), class: 'thumbnail'
+
+= link_to 'Edit', edit_student_path(@student)
+\|
+= link_to 'Back', students_path
