@@ -1,0 +1,9 @@
+= simple_form_for([:admins, @program]) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :program_type
+
+  .form-actions
+    = f.button :submit

@@ -1,0 +1,21 @@
+%h1 Listing programs
+
+%table.table.table_condensed.table_bordered
+  %tr
+    %th Name
+    %th Program type
+    %th
+    %th
+    %th
+
+  - @programs.each do |program|
+    %tr
+      %td= program.name
+      %td= program.program_type
+      %td= link_to 'Show', [:admins, program]
+      %td= link_to 'Edit', edit_admins_program_path(program)
+      %td= link_to 'Destroy', [:admins, program], :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Program', new_admins_program_path
