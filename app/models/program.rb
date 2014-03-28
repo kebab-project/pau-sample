@@ -3,5 +3,5 @@ class Program < ActiveRecord::Base
 
   enumerize :program_type, in: [:birinci, :ikinci]
   validates_presence_of :name
-
+  has_many :students
 end

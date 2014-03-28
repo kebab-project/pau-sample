@@ -1,6 +1,8 @@
 Pusula::Application.routes.draw do
 
 
+  resources :students
+
   devise_for :admins
 
   namespace :admins do
