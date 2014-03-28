@@ -43,3 +43,9 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'haml-rails'
+gem 'compass-rails'
+gem 'bootstrap-sass'
+gem 'simple_form'
+gem 'show_for'
