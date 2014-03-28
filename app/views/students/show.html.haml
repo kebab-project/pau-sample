@@ -15,6 +15,9 @@
 %p
   %b Program:
   = @student.program.try(:name)
+%p
+  %b Picture
+  = image_tag @student.picture(:medium), class: 'thumbnail'
 
 = link_to 'Edit', edit_student_path(@student)
 \|

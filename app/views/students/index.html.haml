@@ -2,6 +2,7 @@
 
 %table.table.table_condensed
   %tr
+    %th Picture
     %th Name surname
     %th Number
     %th Phone
@@ -13,6 +14,7 @@
 
   - @students.each do |student|
     %tr
+      %td= image_tag student.picture(:thumb)
       %td= student.name_surname
       %td= student.number
       %td= student.phone
